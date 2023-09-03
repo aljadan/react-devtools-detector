@@ -48,7 +48,7 @@ function App() {
 
 Parameters:
 
-- `interval` (optional): The time (in milliseconds) at which the hook should check for the DevTools status. If value is ≤ 0, detection stops. Default is `500ms`.
+- `interval` (optional): The time (in milliseconds) at which the hook should check for the DevTools status. Default is `500ms`.
 
 Returns:
 
