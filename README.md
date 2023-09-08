@@ -2,7 +2,7 @@
 
 > A React hook that detect if DevTools is open.
 
-## [Demo](react-devtools-detector.vercel.app)
+## [Demo](https://react-devtools-detector.vercel.app)
 
 ## 📦 Installation
 
@@ -73,4 +73,4 @@ The hook relies on heuristic methods to determine the status of DevTools, ensuri
 
 ## Reference
 
-> [devtools-detector](https://github.com/AEPKILL/devtools-detector)
+> [AEPKILL/**devtools-detector**](https://github.com/AEPKILL/devtools-detector)
