@@ -2,25 +2,29 @@
 
 > A React hook that detect if DevTools is open.
 
-## Install
+## [Demo](react-devtools-detector.vercel.app)
 
-You can install `react-devtools-detector` with npm, Yarn, or pnpm.
+## 📦 Installation
+
+Choose your preferred package manager:
 
 ```bash
 npm install react-devtools-detector
+# or
 yarn add react-devtools-detector
+# or
 pnpm install react-devtools-detector
 ```
 
-## Usage
+## 🚀 Usage
 
-Here's how to use `react-devtools-detector`:
+Easily integrate the detector into your React application:
 
 ```jsx
-import useIsDevtoolsOpen from 'react-devtools-detector';
+import useIsDevToolsOpen from 'react-devtools-detector';
 
 function App() {
-  const isDevtoolsOpen = useIsDevtoolsOpen();
+  const isDevtoolsOpen = useIsDevToolsOpen();
 
   return (
     <div>{isDevtoolsOpen ? 'DevTools is open' : 'DevTools is closed'}</div>
@@ -28,13 +32,16 @@ function App() {
 }
 ```
 
-You can set the interval to check if DevTools is open:
+For advanced configurations:
 
 ```jsx
-import useIsDevtoolsOpen from 'react-devtools-detector';
+import useIsDevToolsOpen from 'react-devtools-detector';
 
 function App() {
-  const isDevtoolsOpen = useIsDevtoolsOpen(1000);
+  const isDevtoolsOpen = useIsDevToolsOpen({
+    interval: 1000,
+    enabled: process.env.NODE_ENV !== 'development',
+  });
 
   return (
     <div>{isDevtoolsOpen ? 'DevTools is open' : 'DevTools is closed'}</div>
@@ -42,21 +49,27 @@ function App() {
 }
 ```
 
-## API
+## 📘 API Reference
 
-### `useIsDevtoolsOpen(interval?: number): boolean`
+### `useIsDevToolsOpen(options?: DevToolsDetectorOptions): boolean`
 
-Parameters:
+**Parameters**:
 
-- `interval` (optional): The time (in milliseconds) at which the hook should check for the DevTools status. Default is `500ms`.
+- `options` (optional):
+  - `interval`: Interval in milliseconds to check if DevTools is open. Defaults to `500ms`.
+  - `enabled`: Flag to enable or disable the detector. Defaults to `true`.
 
-Returns:
+**Returns**:
 
-A boolean indicating whether the DevTools is open (`true`) or closed (`false`).
+- Boolean value indicating the status of DevTools (`true` if open, `false` otherwise).
 
-## Note
+## ⚠️ Important Note
 
-The detection is based on certain heuristics and may not be 100% accurate. This package utilizes the [devtools-detector](https://github.com/AEPKILL/devtools-detector) package for detecting the status of DevTools.
+It's highly recommended to disable detection during development (`enabled: false`). The detection process clears the entire console, which could obscure valuable error messages or logs.
+
+## 🔧 Under the Hood
+
+The hook relies on heuristic methods to determine the status of DevTools, ensuring a high but not absolute accuracy. The core detection functionality is powered by [devtools-detector](https://github.com/AEPKILL/devtools-detector).
 
 ## Reference
 
