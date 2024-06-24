@@ -4,9 +4,7 @@ import useIsDevToolsOpen from '../../.';
 import './App.css';
 
 function App() {
-  const isDevToolsOpen = useIsDevToolsOpen({
-    enabled: import.meta.env.PROD,
-  });
+  const isDevToolsOpen = useIsDevToolsOpen();
   return (
     <>
       <div>

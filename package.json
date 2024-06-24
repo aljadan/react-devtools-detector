@@ -1,5 +1,5 @@
 {
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -59,7 +59,7 @@
     "typescript": "^3.9.10"
   },
   "dependencies": {
-    "devtools-detector": "^2.0.14"
+    "devtools-detector": "^2.0.18"
   },
   "publishConfig": {
     "access": "public"
